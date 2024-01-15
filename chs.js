@@ -77,6 +77,7 @@ var cnItems = {
     "Rise your intellect attribute, improving skill learning speed": "提升你的智力属性，从而增加符文学习速度",
     "Knowledge Rune": "知识符文",
     "Increase knowledge generation": "增加知识产量",
+    "Mana Rate": "法力效率",
     "Mana Rate Rune": "法力效率符文",
     "Improve your mana gain": "提升你的法力产量",
     "Rune Master": "大师符文",
