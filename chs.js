@@ -427,11 +427,11 @@ var cnItems = {
     "Scholar": "学术",
     "Improve your learning abilities, increasing runes learning speed": "强化你的学习能力，提升符文学习速度",
     "Physical": "物理",
-    "Improve your physical power, making all physical actions executed faster": "强化你的身体力量，提升物理类动作的速度上限和速度",
+    "Improve your physical power, making all physical actions executed faster": "强化你的身体力量，提升物理动作的速度上限和速度",
     "Mental": "精神",
-    "Improve your mental power, making all mental actions executed faster": "强化你的精神力量，提升精神类动作的速度上限和速度",
+    "Improve your mental power, making all mental actions executed faster": "强化你的精神力量，提升精神动作的速度上限和速度",
     "Magical": "魔法",
-    "Improve your magic power, making all spells executed faster": "强化你的魔法力量，提升魔法类动作的速度上限和速度",
+    "Improve your magic power, making all spells executed faster": "强化你的魔法力量，提升法术动作的速度上限和速度",
 
     "till reincarnation available": "动作总基础耗时 后转生可用",
 
@@ -779,6 +779,7 @@ var cnItems = {
     "Shop": "商店",
     "Regenerate Shop": "刷新商店",
     "Hired (": "已雇佣（",
+    "of": "/",
     "Each hired mercenary provides his boost. Boost type depends on mercenary type, while effect amount depends on mercenaries level and rate.": "雇佣的每一位佣兵都会提供加成。加成类型基于佣兵的类型，加成数值取决于佣兵的等级和启用幅度（均为指数）",
     "Produce": "生产",
     "Capacity Multiplier": "上限倍率",
