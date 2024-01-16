@@ -587,7 +587,7 @@ var cnItems = {
     "Change": "变更",
     "None": "无",
     //"Active Runes:": "学习中符文：",
-    "Click rune to view details": "点击符文名称以查看更多内容",
+    "Click rune to view details": "点击符文图标以查看更多内容",
 
     "Wizard Orb (": "巫师宝珠（",
     "(": "（",
