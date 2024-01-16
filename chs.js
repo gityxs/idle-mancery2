@@ -464,7 +464,7 @@ var cnItems = {
     "Cellar": "地窖",
     "You must have some place to store your goods": "你得准备一些储藏货物的地方",
     "Lumbermill": "锯木机",
-    "Increase your wood craft efficiency": "提高制作精炼木材的效率",
+    "Increase your wood craft efficiency": "提高制作精炼木材和注能木材的效率",
     "Magic Clock": "魔法时钟",
     "Create clock that able to slow down time around you, increasing your actions speed": "制作能够减缓周围时间流速的时钟，提高你的动作速度",
     "Magic Scroll": "魔法卷轴",
