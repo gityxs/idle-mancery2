@@ -560,7 +560,7 @@ var cnItems = {
     "What reincarnation type should I chose?": "我应该选择哪种转生方式？",
     "General answer - its up to you. Not that helpful advise, right?": "答案是——看你自己。是不是说了好像等于没说？",
     'Ok. Reincarnations giving a huge boost to max actions speed. Having actions boosting attributes that they rely on (like "Mental Aptitude", or "Breath Techniques") - speed limitations are your main bottlenecks early on. So, first of all, look at resource you need the most, ways of incrementing it via actions and limiting attribute on this action.': "转生会提供巨额的动作速度上限加成。对于某些动作（例如 休息 和 呼吸技巧 等）而言，速度上限是非常致命的限制。因此，你需要找到目前最需要提高速度上限的动作种类，并且进行这种类型的转生。",
-    "Need more mana cap? Meditation is a way you go. Need more intellect? Try mental reincarnation. Need more energy to be able grab even more intellect? Go for physical reset.": "休息经常是耗时最长的动作，而且受到速度上限的影响也最严重。因此，第一次转生建议选择物理转生，后面就看具体情况了。",
+    "Need more mana cap? Meditation is a way you go. Need more intellect? Try mental reincarnation. Need more energy to be able grab even more intellect? Go for physical reset.": "休息经常是占用时长最多的动作，而且受到速度上限的影响也最严重。因此，第一次转生建议选择物理转生，后面就看具体情况了。",
     "Feel stuck on runes - do Runes reincarnation. Learning speed multiplier will give you more levels, more sacrifice power and make your run starts easier.": "如果感觉符文等级太低，也可以执行学术转生。学术转生可以提供大量的符文学习速度，从而提供整体的加成，也是很有用的。",
 
     //
