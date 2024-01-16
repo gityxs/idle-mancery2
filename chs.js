@@ -517,7 +517,7 @@ var cnItems = {
     "Perform Investigate World for 10000 times": "进行 探索世界 动作 10K 次",
 
     //
-    "I am new to game. How should I start?": "",
+    "I am new to game. How should I start?": "我是萌新，这游戏怎么玩？",
     "Every mage should start from learning runes. They provide bonuses to basic and very important mage attributes and resources.": "",
     'Navigate to "Runes" tab under "Learning" page. Here you see list of runes available for you. Initially you have only one rune available - "Mana Capacity". So, you should start learning it by clicking "OFF" button on it.After you press the button, the inscription will change to "ON", which means that this rune is active. Studying the rune requires time and resources. Once you have gathered enough resources, they will be deducted from you, and the study of the active rune will begin. As soon as the study is completed - you will receive a new level of the rune, with greater bonuses.': "打开 学习 页面下的 符文 选项卡。在这里，你会看到可用的符文列表。最初，您只有一个可用的符文——法力容量符文。因此，你应该通过单击其上的 关 按钮来开始学习它。按下按钮后，符文状态将变为 开，表示该符文已激活。学习符文需要时间和资源。一旦收集到足够的资源，它们将被扣除，并且用于学习激活的符文。学习完成后，符文的等级就会提高，其加成也会提高。",
     "It should be noted that the study of the active rune will not start until you accumulate enough resources. If the rune is active, its study will begin automatically as soon as you have accumulated enough resources.": "值得注意的是，如果所需资源不足，激活的符文并不会开始学习。但只要符文保持激活状态，一旦收集到足够的资源，其学习就会自动开始。",
@@ -547,7 +547,7 @@ var cnItems = {
     'You should first of all create new actions list (bottom left of "Actions" tab at "City" page). Add new actions to your list. You\'ll see time required for list to run, and bonuses/resources provided by list to the bottom right.': "你需要创建新列表（在城市-动作页面的左下角），然后将动作加入列表，并且为列表命名，然后保存。过程中你可以在页面右下方看到整个列表每秒提供的加成和消耗。",
     "Keep on track your action list resources usage. If you dont have enough of them - list will be performed much slower (or even wont be able to run at all)": "需要特别留意列表的消耗。如果资源不足，列表的执行速度会相应降低，甚至可能完全停止。",
     'Also, please keep in mind that almost every action requires energy. If you see that it goes below 0 for edited list - just add "Rest" action. It will take more time to perform, but makes you able to keep running list without tiring (going above 0 on "Energy" resource, and interrupting list)': "另一项需要注意的是，几乎所有动作都需要消耗体力。不过添加完动作之后，可以直接点击动作列表下方的 增加 X 次休息 按钮，自动添加足够数量的休息。这会让列表的耗时变长，但也会让列表可以一直执行下去，不会因为体力耗尽而停止。",
-    "I feel stuck. Actions are taking too much to be done": "我感觉卡住了。有些动作耗时太长了",
+    "I feel stuck. Actions are taking too much to be done": "我感觉卡住了。有些动作耗时太长了。",
     "First of all, every action can be sped up by boosting impacting attributes. You can see this in action details, by clicking specific action": "首先，每一个动作的耗时都可以通过关联属性来降低。每个动作的关联属性可以通过动作的详情页查看。",
     "Also, when you create or edit list, you can see in list details (bottom right, under bonuses and resources gain breakdown) attributes, impacting list speed the most": "另外，在你创建或编辑列表时，你可以在页面右下方看到整个列表的关联属性，以及影响比例。",
     'So, if you create list having a lot of "Investigate the world" actions - just run breath techniques before to speed it up, or add them into you list, to make it speed up itself': "例如，如果你创建了一个包含大量 探索世界 动作的列表，你可以先执行 呼吸技巧 动作来让他变快；也可以直接把两个动作加进同一个列表，这样它自己就会执行得越来越快。",
