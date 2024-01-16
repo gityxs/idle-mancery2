@@ -590,6 +590,7 @@ var cnItems = {
     "Click rune to view details": "点击符文名称以查看更多内容",
 
     "Wizard Orb (": "巫师宝珠（",
+    ")": "）",
     "Build": "建造",
     "Current tier": "当前等级",
     "increase runes cost by": "使符文学习成本倍率变为 ",
@@ -756,7 +757,7 @@ var cnItems = {
     "Amount of time required for action to perform in list. The highest number - the more attention you should pay to basic attributes, affecting this action": "该动作在列表中耗时的占比。这个数字越高，代表你如果想降低该列表耗时，应该越关注影响该动作的属性（例如耐力，智力，敏捷等）",
 
     "Set": "设置",
-    "Time to complete:": "耗时：",
+    "Time to complete:": "耗时：　　",
     "Produce": "生产",
     "Production Multiplier": "产量倍率",
     "Capacity": "上限",
