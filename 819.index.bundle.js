@@ -9500,7 +9500,7 @@
             },
             {
               id: r.CHARGED_WOOD,
-              name: "Charged Wood",
+              name: "Charge Wood",
               getCost:
                 ((Cr = {}),
                 (Cr[r.REFINED_WOOD] = function (e) {
@@ -9532,7 +9532,7 @@
             },
             {
               id: r.CHARGED_PAPER,
-              name: "Charged Paper",
+              name: "Charge Paper",
               getCost:
                 ((Ir = {}),
                 (Ir[r.PAPER] = function (e) {
@@ -9564,7 +9564,7 @@
             },
             {
               id: r.SAND,
-              name: "Sand",
+              name: "Make Sand",
               getCost:
                 ((Lr = {}),
                 (Lr[r.STONE] = function (e) {
@@ -9597,7 +9597,7 @@
             },
             {
               id: r.GLASS,
-              name: "Glass",
+              name: "Craft Glass",
               getCost:
                 ((br = {}),
                 (br[r.SAND] = function (e) {

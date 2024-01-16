@@ -1496,7 +1496,7 @@
           J = [
             {
               id: "manacap",
-              name: "Mana Cap",
+              name: "Mana Cap Rune",
               description:
                 "Expand your magic abilities by learning this rune. Mana capacity will be slightly increased.",
               unlockCondition: function (e) {
@@ -1518,7 +1518,7 @@
             },
             {
               id: "willpower",
-              name: "Willpower",
+              name: "Willpower Rune",
               description:
                 "Rise your willpower attribute, improving mana generation rate",
               unlockCondition: function (e) {
@@ -1542,7 +1542,7 @@
             },
             {
               id: "intellect",
-              name: "Intellect",
+              name: "Intellect Rune",
               description:
                 "Rise your intellect attribute, improving skill learning speed",
               unlockCondition: function (e) {
@@ -1587,7 +1587,7 @@
             },
             {
               id: "manarate",
-              name: "Mana Rate",
+              name: "Mana Rate Rune",
               description: "Improve your mana gain",
               unlockCondition: function (e) {
                 return (
@@ -10619,7 +10619,7 @@
             },
             {
               id: r.CHARGED_WOOD,
-              name: "Charged Wood",
+              name: "Charge Wood",
               getCost:
                 ((di = {}),
                 (di[r.REFINED_WOOD] = function (e) {
@@ -10651,7 +10651,7 @@
             },
             {
               id: r.CHARGED_PAPER,
-              name: "Charged Paper",
+              name: "Charge Paper",
               getCost:
                 ((fi = {}),
                 (fi[r.PAPER] = function (e) {
@@ -10683,7 +10683,7 @@
             },
             {
               id: r.SAND,
-              name: "Sand",
+              name: "Make Sand",
               getCost:
                 ((hi = {}),
                 (hi[r.STONE] = function (e) {
@@ -10716,7 +10716,7 @@
             },
             {
               id: r.GLASS,
-              name: "Glass",
+              name: "Craft Glass",
               getCost:
                 ((vi = {}),
                 (vi[r.SAND] = function (e) {
@@ -10756,7 +10756,7 @@
             },
             {
               id: r.IRON_PLATE,
-              name: "Iron Plate",
+              name: "Craft Iron Plate",
               getCost:
                 ((Ei = {}),
                 (Ei[r.IRON_ORE] = function (e) {

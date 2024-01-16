@@ -433,15 +433,17 @@ var cnItems = {
     "Magical": "魔法",
     "Improve your magic power, making all spells executed faster": "强化你的魔法力量，提升魔法类动作的速度上限和速度",
 
+    "till reincarnation available": "动作总基础耗时 后转生可用",
+
     //
-    "Refine Wood": "精炼木材",
+    "Refine Wood": "制造精炼木材",
     "Craft Paper": "制造纸",
     "Craft Brick": "制造砖块",
-    "Charged Wood": "注能木材",
-    "Charged Paper": "注能纸",
-    "Sand": "沙子",
-    "Glass": "玻璃",
-    "Iron Plate": "铁板",
+    "Charge Wood": "制造注能木材",
+    "Charge Paper": "制造注能纸",
+    "Make Sand": "制造沙子",
+    "Craft Glass": "制造玻璃",
+    "Craft Iron Plate": "制造铁板",
 
 
     //
@@ -566,11 +568,12 @@ var cnItems = {
     "Keep expanding mana, investigating new upgrades to unlock more resources": "不断扩展法力上限，探索新的升级，来解锁新的资源",
     "RESOURCES": "资源",
     "ATTRIBUTES": "属性",
-    "Running Actions: ": "进行中动作：",
+    //"Running Actions:": "进行中动作：",
     "No running actions. Navigate to city actions tab for details": "无进行中动作。打开 城市 标签页以查看更多内容",
     "Never": "永不",
     "Click to see more details": "点击以查看更多内容",
     "Click to activate": "点击以激活",
+    "Click to deactivate": "点击以取消",
     "ON": "开",
     "OFF": "关",
 
@@ -579,12 +582,11 @@ var cnItems = {
     "Effect multiplier: x": "效果倍率：x",
     "Sacrifice will reset all your runes levels, runic upgrades and resources, but you will obtain bonus to speed and effect of specific rune you sacrificed": "符文献祭会重置所有符文的等级、符文页的升级和资源，但会为所献祭的符文提供学习速度加成和效果加成，加成的数值取决于献祭时该符文的等级",
     "Sacrifice": "献祭",
-    "Running Preset: ": "已启用预设：",
+    //"Running Preset:": "已启用预设：",
 
     "Change": "变更",
     "None": "无",
     //"Active Runes:": "学习中符文：",
-    //"(Click OFF/ON buttons to activate/deactivate rune learning)": "（点击关/开按钮以开始/停止符文学习）",
     "Click rune to view details": "点击符文名称以查看更多内容",
 
     "Wizard Orb (": "巫师宝珠（",
@@ -617,7 +619,7 @@ var cnItems = {
     "Edit": "编辑",
     "Delete": "删除",
     "Stop": "停止",
-    "Run": "运行",
+    "Run": "开始",
     "Preset Name: ": "预设名称：",
     "Preset Orb Level: ": "巫师宝珠等级：",
     "Is Default (turned on automatically on prestige)": "设为默认（即重置后自动启用）",
@@ -692,7 +694,8 @@ var cnItems = {
     */
 
     //
-    "This action has diminish return, yielding ": "该动作的收益已递减，目前收益为 ",
+    "This action has diminish return, yielding": "该动作的收益已递减，目前收益为 ",
+    "efficiency": "",
     "Produce": "生产",
     "Production Multiplier": "产量倍率",
     "Capacity": "上限",
@@ -704,13 +707,48 @@ var cnItems = {
     "Maximum amount of actions performed per second. This cap can't be upgraded by impacting attributes explicitly, but there are other ways to increase this limit": "每秒可执行该动作的最大次数。该数值无法被关联属性提升，但可以通过其他方法提升（例如敏捷属性和转生）",
     "Attributes that reduce time, required for action to be performed": "可降低该动作耗时的属性",
     "Attributes impacting:": "关联属性",
-    "Tags:": "标签",
 
+    //
+    "Tags:": "标签",
+    "actions": "动作",
+
+    "physical": "物理",
+    "mental": "精神",
+    "magical": "魔法",
+    "spell": "法术",
+    "technical": "技巧",
+    "crafting": "工艺",
+
+    "training": "训练",
+    "empower": "强化",
+    "infusion": "注入",
+
+    "illusion": "幻象",
+    "conjuration": "造物",
+
+    "coins": "金币",
+    "energy": "体力",
+    "strength": "力量",
+    "vitality": "耐力",
+    "knowledge": "知识",
+    "rune mastery": "符文精通",
+    "intellect": "智力",
+    "spellbinding": "咒力",
+    "conjuration lore": "造物学识",
+    "mana": "法力",
+    "spark": "火花",
+    "wood": "木头",
+    "stone": "石头",
+    "iron": "铁",
+
+    "capacity": "上限",
+    "runes": "符文",
+    
     //
     "Create New List": "创建新列表",
     "Search lists": "搜索列表",
     "Edit": "编辑",
-    "Run": "运行",
+    "Run": "开始",
     "Delete List": "删除列表",
     "Click create new list button above to create some list of actions that can be run over time, providing you various bonuses": "点击 创建新列表 按钮来建立一个列表，将动作加入其中，并循环执行，来为你提供各种加成",
     "Enter list name": "输入列表名称",
@@ -730,7 +768,7 @@ var cnItems = {
     "Actions ": "动作 ",
     "Search actions": "搜索动作",
     "Click action to see details": "点击动作名称以查看更多内容",
-    "Running: ": "运行中：",
+    //"Running: ": "运行中：",
 
     //
     "Upgrade": "升级",
@@ -946,7 +984,11 @@ var cnPrefix = {
     "Current bonus:": "当前加成：",
     "Bonus on reset:": "转生后加成：",
 
-    "Active Runes:": "学习中符文：",
+    "Active Runes: ": "已激活符文：",
+    "Running Actions: ": "进行中动作：",
+    "Running Preset: ": "已启用预设：",
+    "Running: ": "进行中：",
+    "Min: ": "速度上限：",
 
     "Rune: ": "符文：",
     //"Runes": "符文",
@@ -1096,7 +1138,7 @@ var cnPostfix = {
     
     "/sec": "/秒",
     "/ sec": "/ 秒",
-    "(Click OFF/ON buttons to activate/deactivate rune learning)": "（点击关/开按钮以开始/停止符文学习）",
+    "(Click OFF/ON buttons to activate/deactivate rune learning)": "（点击关/开按钮以激活/取消符文学习）",
 }
 
 //需排除的，正则匹配
@@ -1183,9 +1225,8 @@ var cnRegReplace = new Map([
     [/^(\d+) December, (\d+)$/, '$2/12/$1 日'],
 
     [/^(.+) rune learning speed$/, '符文学习速度变为 $1 倍'],
-    [/^(.+) physical actions max speed, (.+) to physical actions speed$/, '物理动作速度上限变为 $1 倍，物理动作速度变为 $2 倍'],
-    [/^(.+) mental actions max speed, (.+) to mental actions speed$/, '物理动作速度上限变为 $1 倍，物理动作速度变为 $2 倍'],
-    [/^(.+) spell max speed, (.+) to spell speed$/, '物理动作速度上限变为 $1 倍，物理动作速度变为 $2 倍'],
+    [/^(.+) physical actions max speed, (.+) to physical actions speed$/, '物理动作速度上限变为 $1 倍，速度变为 $2 倍'],
+    [/^(.+) mental actions max speed, (.+) to mental actions speed$/, '精神动作速度上限变为 $1 倍，速度变为 $2 倍'],
+    [/^(.+) spell max speed, (.+) to spell speed$/, '法术动作速度上限变为 $1 倍，速度变为 $2 倍'],
 
-    [/^(.+) till reincarnation available$/, '距离转生可用还需要 $1 动作总基础时长'],
 ]);
