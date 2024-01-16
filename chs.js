@@ -590,6 +590,7 @@ var cnItems = {
     "Click rune to view details": "点击符文名称以查看更多内容",
 
     "Wizard Orb (": "巫师宝珠（",
+    "(": "（",
     ")": "）",
     "Build": "建造",
     "Current tier": "当前等级",
