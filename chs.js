@@ -695,7 +695,7 @@ var cnItems = {
     */
 
     //
-    "This action has diminish return, yielding": "该动作的收益已递减，目前收益为 ",
+    "This action has diminish return, yielding": "该动作的收益已递减，目前收益约为 ",
     "efficiency": "",
     "Produce": "生产",
     "Production Multiplier": "产量倍率",
