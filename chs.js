@@ -769,7 +769,7 @@ var cnItems = {
     "Impacting Attributes": "关联属性",
     "Actions ": "动作 ",
     "Search actions": "搜索动作",
-    "Click action to see details": "点击动作名称以查看更多内容",
+    "Click action to see details": "点击动作以查看更多内容",
     //"Running: ": "运行中：",
 
     //
