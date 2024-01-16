@@ -198,7 +198,7 @@ var cnItems = {
     "Train your physical abilities": "训练你的力量",
     "Breath Techniques": "呼吸技巧",
     "Train your vitality": "训练你的耐力",
-    "Investigate World": "调查世界",
+    "Investigate World": "探索世界",
     "Learn more about surroundings and place where you are living": "调查你周围的环境",
     "Train Endurance": "训练耐力",
     "Take endurance training at local gladiators school": "在当地的角斗士学校参加耐力训练课程",
