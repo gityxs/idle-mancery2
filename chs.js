@@ -635,6 +635,7 @@ var cnItems = {
     //
     "Runes": "符文",
     "Presets": "预设",
+    'Presets allow you to create prioritized rune learning list. Create new preset, move runes in the list to change priority (top ones will be turned on first). After you save preset, you can switch between them from "runes" page.': "通过预设，你可以设置符文激活的优先级，并自动运行。排在前面的符文会被优先激活。保存预设之后，在 符文 页面的右上角就可以快速切换。",
     "Crystals": "水晶",
 
     //
