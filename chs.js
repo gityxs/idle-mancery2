@@ -762,7 +762,9 @@ var cnItems = {
     "Fleetfoot III": "",
     "You have achieved the pinnacle of agility, moving like a whisper on the wind.": "",
     "Reach 1Sx Agility": "",
-    "Sewer Survivor": "",
+    */
+    /*
+    "Sewer Survivor": "下水道生还者",
     "You have braved the dank and dangerous sewers, reaching combat level 50 amidst its murky depths.": "",
     "Reach combat level 50 in the Sewers": "",
     "Lord of the Underworld": "",
@@ -1131,9 +1133,9 @@ var cnItems = {
     "Upgrade item(s)": "升级物品",
     "Pick items:": "仅保留稀有度：",
     "Any rarity": "所有稀有度",
-    "At least enchanted": "附魔 以上",
-    "At least rare": "罕见 以上",
-    "At least epic": "史诗 以上",
+    "At least enchanted": "至少为 附魔",
+    "At least rare": "至少为 罕见",
+    "At least epic": "至少为 史诗",
     "Select Slots (": "仅保留栏位（",
     "head": "头部",
     "body": "躯干",
