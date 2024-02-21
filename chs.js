@@ -34,6 +34,8 @@ var cnItems = {
     "Glass": "玻璃",
     "Iron Ore": "铁矿石",
     "Iron Plate": "铁板",
+    "Elemental Brick": "元素砖块",
+    "Elemental Plate": "元素铁板",
 
     //
     "INTELLECT": "智力",
@@ -117,7 +119,7 @@ var cnItems = {
     "Muscle Rune": "肌力符文",
     "Increase strength attribute": "提升力量属性",
     "Agility Rune": "敏捷符文",
-    "Increase actions limits": "提升动作执行数限制",
+    "Increase agility attribute, which increase maximum speed of actions performance": "提升敏捷属性，它会影响动作执行速度的上限",
     "Spark Holding Rune": "火花符文",
     "Increase spark capacity": "提升火花上限",
     "Elven Rune": "精灵符文",
@@ -125,7 +127,7 @@ var cnItems = {
 
     //
     "Intellect": "智力",
-    "Determines how quickly you learning runes": "增加符文学习速度",
+    "Determines how quickly you are learning runes": "决定符文学习速度",
     "Will Power": "精神",
     "Increase mana re-generation speed": "增加法力产量",
     "Rune Mastery": "符文精通",
@@ -135,7 +137,7 @@ var cnItems = {
     "Vitality": "活力",
     "Increase endurance activities efficiency": "增加活力类动作的速度",
     "Agility": "敏捷",
-    //"Increase endurance activities efficiency": "增加活力类动作的速度",
+    "Increase maximum speed of your actions": "增加动作执行速度上限",
     "Spellbinding": "咒力",
     "Increase general spell efficiency": "增加法术类动作的速度",
     "Rest Efficiency": "休息效率",
@@ -239,11 +241,12 @@ var cnItems = {
     "Boosts gold cap": "提升金币上限",
     "Mana Crystal": "法力水晶",
     "Boosts mana cap": "提升法力上限",
-    "Wellness Crystal": "富饶水晶",
+    "Wealth Crystal": "财富水晶",
     "Generates some coins passively": "自动生成金币",
     "Protection Crystal": "防护水晶",
     "Amplifying your armor by creating invisible shield around you": "在你周围制造无形的护盾，提升你的护甲",
-
+    "Elemental Protection Crystal": "元素防护水晶",
+    "Amplifying your elemental resistances by creating invisible energetic field": "通过创造隐形的能量力场，提升你的元素抗性",
 
     //
     "(You need to create list, add actions into it and run list to start receiving benefits from it)": "（你需要建立列表，并将动作添加到列表，才能执行动作并获得收益）",
@@ -257,6 +260,7 @@ var cnItems = {
     "Head Miner": "矿长",
     "Builder": "建筑工人",
     "Rest": "休息",
+    "Even mages need to take some rest. Devote some time to yourself to recover energy": "就算是巫师，也是需要休息的。花点时间恢复你的精力",
     "Push Up": "俯卧撑",
     "Train your physical abilities": "训练你的力量",
     "Breath Techniques": "呼吸技巧",
@@ -291,8 +295,10 @@ var cnItems = {
     "Use magic to increase your intellect potential. Efficient, but dangerous.": "使用魔法火花强化你的大脑，从而提升智力。这很有效，也很危险",
     "Magic Lessons": "魔法课程",
     "Train your capabilities of spell casting": "训练你施展法术的能力",
-    "Read Elven Books": "阅读精灵书籍",
-    "Spent some time in elven library to increase your knowledge output": "在精灵族的图书馆里阅读，从而提升知识产量",
+    //"Read Elven Books": "阅读精灵书籍",
+    //"Spent some time in elven library to increase your knowledge output": "在精灵族的图书馆里阅读，从而提升知识产量",
+    "Improve Spark Storage": "提升火花储量",
+    "Feel the electricity in your hands": "感受指尖跃动的电光吧",
     "Conjuration Training": "造物训练",
     "Train your conjuration lore": "提升你的造物学识",
     "Enchant Fingers": "附魔手指",
@@ -303,6 +309,8 @@ var cnItems = {
     "Make your spirits invincible, and your will undeniable": "使你的精神无可匹敌，让你的意志无可违逆",
     "Conjure Spark": "创造火花",
     "Spend your time making ritual, increasing your mana output": "进行魔法仪式，创造魔法火花",
+    "Conjuration Singing": "造物咏唱",
+    "Train your conjuration lore": "训练你的造物学识",
     "Conjure Wood": "创造木材",
     "Conjure some pile of raw wood": "用魔法凭空创造木材",
     "Conjure Stone": "创造石头",
@@ -329,7 +337,7 @@ var cnItems = {
     "Lazy Crystal": "懒惰水晶",
     "Unlock crystal that allows upgrades automation": "解锁一种水晶，它将使你能够自动进行升级",
     "Gold Crystal": "黄金水晶",
-    "Unlock gold crystal that increase gold caps": "解锁黄金水晶，它将提升金币上限",
+    "Unlock gold crystal that increases gold caps": "解锁黄金水晶，它将提升金币上限",
     "Endurance Rune": "耐久符文",
     "Unlock new rune that can significantly boost your body": "解锁一种新的符文，它会显著地强化你的身体",
     "Muscle Rune": "肌肉符文",
@@ -338,14 +346,16 @@ var cnItems = {
     "Visit local arena to obtain access to advanced training lessons": "访问当地的角斗士学校，你可以在那里接受高级的训练",
     "Coins Protection": "金币保护",
     "Protected Gold Stash prevent coins from being reset on runic sacrifice": "改良你的金币储藏处，使得符文献祭不再重置金币",
-    "Mercenaries Market": "佣兵市场",
-    "Finally you became nobble enough to encourage other people to work for you. They wont do it for free, however": "你终于富到可以雇人帮你干活了。当然，这不会是免费的",
+    //"Mercenaries Market": "佣兵市场",
+    //"Finally you became nobble enough to encourage other people to work for you. They wont do it for free, however": "你终于富到可以雇人帮你干活了。当然，这不会是免费的",
     "Rune Protection": "符文保护",
     "Create magic barriers on your runes, preventing some amounts of runes reset on sacrifice (excepting the one that you sacrificing)": "在你的符文上创造魔法屏障，使符文献祭时，除所献祭的符文以外的符文可以保存一定数量",
     "Knowledge Knowledge": "知识的知识",
     "Unlock new ways of improvement of your magic workplace to further advance your learning capabilities": "解锁新的强化魔法工作台的方式，这会进一步提升你的学习能力",
+    "Rune Expertise": "符文专家",
+    "Deeper understanding of runes led you to new innovative ways of managing them. Unlocks runes auto-learn": "对符文的深厚理解，让你终于能掌握一种全新的方式来学习它们。解锁自动符文学习",
     "Aptitude": "头脑锻炼",
-    "Learn new techniques to increase your mental powers": "学习新的技术，从而提升你的智力",
+    "Learn new techniques to increases your mental powers": "学习新的技术，从而提升你的智力",
     "Brainstorm": "头脑风暴",
     "Devote your time to magic investigations": "花费时间来进行魔法探索",
     "Reincarnation": "转生",
@@ -373,14 +383,16 @@ var cnItems = {
     "Spark Mind Infusion": "精神火花注入",
     "Scientists saying brain is also part of humans body. Not that mages should believe in science, but maybe you could enchant your mind as well?": "科学家说大脑也是人体的一部分。巫师确实没必要相信科学，不过你也可以试试用火花强化自己的大脑？",
     "Courses of Apprentice": "魔法学徒课程",
-    "Finally you can start learning true magic... Aren't you?": "终于，你可以开始学习真正的魔法了……对吧？",
+    "Finally you can start learning true magic... Can't you?": "终于，你可以开始学习真正的魔法了……对吧？",
     "Elven Rune": "精灵符文",
     "Open new opportunities by learning elven language, unlocking new rune": "学习精灵语可以为你打开全新的可能，解锁新的符文",
-    "Elven Library": "精灵图书馆",
-    "Investigate better elven science to learn more about magic and understand the world of wizardry": "进一步研究精灵族的科学，学习新的魔法，理解巫术的世界",
+    //"Elven Library": "精灵图书馆",
+    //"Investigate better elven science to learn more about magic and understand the world of wizardry": "进一步研究精灵族的科学，学习新的魔法，理解巫术的世界",
     "Conjuration Study": "造物研究",
     "Unlock new training, focused on conjuration training": "解锁全新的训练，可以让你提高造物法术的速度",
-    "Wellness Crystal": "富饶水晶",
+    "Basic Elementalism": "基本元素学",
+    "Learn how to handle sparks more efficiently. Unlock new ways of spark storage improvement": "学习如何更有效地掌控火花。解锁新的提升火花储量的方式",
+    "Wealth Crystal": "富饶水晶",
     "What if you try to make crystal creating illusion of wellness? You could use magic to make you rich!": "试试看，用象征财富的幻象法术制造水晶会怎么样呢？说不定这种魔法可以让你一夜暴富！",
     "Woodworking": "木工",
     "Learn how to combine your magic with your handwork to create wood and something useful from it!": "学习如何把你的魔法和手工艺结合起来。你将凭空创造木头，并用它制造一些有用的东西！",
@@ -390,10 +402,10 @@ var cnItems = {
     "Lets master some harder materials": "让我们来尝试一些更坚硬的材料",
     "Charged Crafting": "注能工艺制造",
     "Learn how to use magic sparks to create new crafting materials and structures.": "学习如何使用魔法火花，创造全新的材料和产品",
-    "Glassmaking": "玻璃制造",
-    "Ok, if you can make stone - you can crash it into sand, and than smelt into glass. Arent you?": "嗯，既然你可以制造石头，那把它打碎成沙子，再熔化加工成玻璃，是很自然的事情吧？",
     "Metalworking": "金属加工",
     "Now that you can manage high temperatures, you could also smelt iron ore": "你可以掌控更高的温度，从而熔化铁矿石",
+    "Glassmaking": "玻璃制造",
+    "Ok, if you can make stone - you can crash it into sand, and than smelt into glass. Can't you?": "嗯，既然你可以制造石头，那把它打碎成沙子，再熔化加工成玻璃，是很自然的事情吧？",
     "Battle Mastery": "战斗精通",
     "Unlocks fights": "解锁战斗系统",
     "Bone Extraction": "拆骨",
@@ -422,6 +434,18 @@ var cnItems = {
     "Unlock new evocation spells": "解锁全新的毁灭法术",
     "Advanced Fight Moves": "高级战斗动作",
     "Unlock new hit types": "解锁全新的物理攻击招式",
+
+    "Elemental Brick Crafting": "元素砖块制造",
+    "Unlock new advanced magic material, that further expand your building capabilities": "解锁新的高级魔法材料，它将使你得以建造更多的东西",
+    "Elemental Protection Crystal": "元素防护水晶",
+    "Deeper understanding of elements unlocks new way of protection against them": "对元素的进一步理解，使你可以解锁新的方式来抵御它们",
+    "Elemental Plate Crafting": "元素铁板制造",
+    "Improve your elemental and building mastery by inventing new material": "发明新的材料，从而提升你对元素和建筑的了解",
+    "Elemental Resonator": "元素共鸣器",
+    "Invent new way of boosting your magic activities using elemental resonance": "利用元素共鸣，发明全新的提升魔法能力的方法",
+    "Conjuration Singing": "造物咏唱",
+    "Now your will in combination with your voice can create incredible things! Unlocks new ways of boosting conjuration.": "你的声音即是你的意志！解锁新的提升造物学识的方法",
+    
 
     //
     "Kick": "踢击",
@@ -490,7 +514,7 @@ var cnItems = {
     "Iron Shield": "铁盾",
     "Bone Shield": "骨盾",
 
-    //
+    /*
     "Aelwyn ": "艾尔温·",
     "Alaric ": "阿拉里克·",
     "Arius ": "阿里乌斯·",
@@ -593,10 +617,11 @@ var cnItems = {
     "Intelligent": "聪明的",
     "Wise": "智慧的",
     "Erudite": "博学的",
+    */
 
     //
     "Scholar": "学术",
-    "Improve your learning abilities, increasing runes learning speed": "强化你的学习能力，提升符文学习速度",
+    "Improve your learning abilities, decrease runes effort increase with leveling (making you able to afford significantly more rune levels)": "强化你的学习能力，降低每一级符文学习所需的经验值。这将显著提升你可以学习的符文等级",
     "Physical": "物理",
     "Improve your physical power, making all physical actions executed faster": "强化你的身体力量，提升物理动作的速度上限和速度",
     "Mental": "精神",
@@ -604,7 +629,7 @@ var cnItems = {
     "Magical": "魔法",
     "Improve your magic power, making all spells executed faster": "强化你的魔法力量，提升法术动作的速度上限和速度",
 
-    "till reincarnation available": "动作总基础耗时 后转生可用",
+    "till reincarnation available": "单位总权重 后转生可用",
 
     //
     "Refine Wood": "制造精炼木材",
@@ -624,7 +649,7 @@ var cnItems = {
     "Very basic, but very helpful equipment for trainings. Provide 5% bonuses to Strength and Vitality": "基础但有用的健身器材。使力量和活力提升 5%",
     "Rune Holder": "符文容器",
     "Lets work on something making runes learning more efficient. At least, these wooden holders should help you a bit": "来制作一些提高符文学习效率的东西吧。这些木制的容器应该会有用",
-    "Bookshell": "书架",
+    "Bookshelf": "书架",
     "It looks like there is complete disorder in your library. An extra shelf will help organize your notebooks with notes.": "看起来你的图书馆里一团乱。额外的书架应该会对整理笔记有帮助",
     "Manuscript": "手稿",
     "Build some magic manuscript to improve your willpower": "制作一些魔法手稿，来提高你的精神",
@@ -640,14 +665,28 @@ var cnItems = {
     "Create clock that able to slow down time around you, increasing your actions speed": "制作能够减缓周围时间流速的时钟，提高你的动作速度",
     "Magic Scroll": "魔法卷轴",
     "Create more sophisticated but pretty useful scroll, amplifying your magic and mental abilities": "运用更好的材料，制作更加复杂但也更强大的卷轴，它能同时增幅你的智力和咒力",
-    "Mana Orb": "法力宝珠",
-    "Create additional mana orb to store your mana": "制作额外的法力宝珠来储存法力",
+    "Knowledge Orb": "知识宝珠",
+    "Put magic parchment into glass sphere to crate magic resonance, boosting your knowledge gain": "利用魔法羊皮纸和玻璃球之间的魔法共鸣，提升知识获取",
     "Conjuration Orb": "造物宝珠",
     "Increase your conjuration spell speed": "提高你使用造物法术的速度",
     "Forge": "车间",
     "Increase your max crafting slots by 1": "使你的工艺制作槽位上限增加 1",
     "Stone Crusher": "碎石机",
     "Increase your brick and sand output": "提高你的砖块和沙子产量",
+    "Elemental Monument": "元素纪念碑",
+    "Increase your spark income": "提升你的火花获取",
+    "Stone Compendium": "石板概要",
+    "Consists of knowledge of the ancient": "包含来自远古的知识",
+    "Elemental Tower": "元素塔",
+    "Must have building for all mages. Boosts your elemental damage": "每一位巫师必备的建筑。提升元素伤害",
+    "Magic Printer": "魔法打印机",
+    "Advanced printing mechanism, boosting your paper goods production": "这是一种高级的打印机制，能提升你的纸张类制造物的产量",
+    "Elemental Resonator": "元素共鸣器",
+    "Creates magic resonance between your mind and material things surrounding you, boosting your conjuration lore even more": "在你的精神和周围的食物之间创造魔法共鸣，进一步提升你的造物学识",
+    "Mind Resonator": "精神共鸣器",
+    "Creates resonance between your brain impulses, severely boosting your mental activities efficiency": "在你的精神活动之间创造共鸣，极大幅度地提升你的精神类动作效率",
+    
+    
     "Bone Storage": "藏骨处",
     "Increase your bone storage capacity": "提升骨头存储上限",
     "Bone Charm": "骸骨护符",
@@ -865,6 +904,337 @@ var cnItems = {
     "Can I somehow improve my equipment?": "我可以升级我的装备吗？",
     'Of course! When you dismantle unnecessary weapons, you receive shards of various materials. Each weapon gives a different number of shards, depending on its quality. After accumulating enough shards, remove the item you want to improve. Press "Upgrade mode" and click on the item. The necessary number of shards will be shown when hovering over the item.': "当然！当你分解不需要的装备（或者通过筛选自动分解）时，你会获得不同种类的材料。更高稀有度的装备会提供更多的材料。进入升级模式，把鼠标移到装备上，就可以看到升级所需的材料，点击就可以升级了。",
    
+    /*
+    "Dark room"
+    "You awaken in a dark and cold room, confused about your whereabouts."
+    "Suddenly, you see the light of a torch gradually approaching."
+    "Oh, has Sleeping Beauty awoken?"
+    "Where am I?"
+    "That\'s not important for now. Domingo, take care of him!"
+    "Yes, sir! Of course!"
+    "The man in the cloak disappears. His servant begins to speak."
+    "My master may seem stern, but he means no harm. You\'re lucky he found you first."
+    "Found me? Where am I, and what\'s happening to me?"
+    "Domingo: \"
+    "What power? I don\'t feel tired..."
+    "Magical strength. Well, since you remember nothing, let\'s start from the basics - runes."
+    "Runes? Magical powers??? I understand less and less what\'s going on."
+    "The servant approaches a table and removes a cover from it. You see strange glowing objects."
+    "Your memory will return to you gradually, along with your magic. First, you need to know that the main power of a mage lies in the power of thought. However, using your magical potential requires a lot of magical energy - mana. These runes hold the basic knowledge for a mage. To start with, you need to work on mana control. Take this magnifying glass."
+    "You take the magnifying glass and approach the table. Letters start to appear on the runes, but they change quickly. You barely manage to read a hieroglyph..."
+    "You (surprised): \"
+    "Reach 2 mana capacity"
+    "Replenish powers"
+    "After some time, Domingo returns to check on your progress."
+    "How are you feeling? Any progress with the mana control?"
+    "You: \"
+    "Domingo: \"
+    "Willpower? How does that help with mana?"
+    "Willpower is the mental strength to channel and sustain magical energy. It\'s essential for a mage. The more you have, the more mana you can gather and retain."
+    "I see. So, how do I increase my willpower?"
+    "By mastering the willpower rune. This rune will help you focus and strengthen your mind, increasing your mana income over time."
+    "I understand. I\'ll focus on this willpower rune then."
+    "Domingo: \"
+    "You take a deep breath, focusing on the new rune before you, determined to master this new aspect of your growing powers."
+    "Have 30 willpower rune"
+    "Sharpened Mind"
+    "Domingo enters the room with a look of anticipation, noticing your deep focus on the magical texts before you."
+    "Domingo: \"
+    "The Intellect rune? Sounds intriguing."
+    "Indeed, it is. This rune enhances your mental acuity, making the rune learning process more efficient. For a mage, having a sharp mind is not a luxury; it\'s a necessity."
+    "So it will aid me in grasping complex magical concepts more swiftly?"
+    "Exactly. The Intellect rune is fundamental in accelerating your understanding of deeper magical principles. It\'s an essential step on your path."
+    "That sounds like a critical advantage. I\'m eager to learn and master this Intellect rune."
+    "Good. Remember, in the world of magic, a keen mind is your most potent weapon."
+    "You nod, feeling a sense of excitement at the prospect of expanding your mental capabilities, ready to delve into the mysteries of the Intellect rune."
+    "Have 4 max mana"
+    "Have 50 intellect rune"
+    "Expanding Mana"
+    "Domingo watches you practice with a satisfied nod."
+    "Your control over mana is improving. Now, it\'s time to expand your limits. Aim to reach 10 maximum mana."
+    "Ten maximum mana? That sounds like a lot."
+    "Indeed, it is a significant milestone. But I believe in your potential. It will allow you to handle more complex and powerful runes."
+    "I\'ll do my best. The more mana I can handle, the more powerful I can become."
+    "Precisely. Remember, the journey of a mage is a marathon, not a sprint. Patience and persistence are key."
+    "You focus back on your runes, determined to reach this new goal, feeling the flow of mana becoming ever more familiar."
+    "Have 10 mana capacity"
+    "Mystical Enhancements"
+    "While practicing, you notice a shelf that begins to glow as you approach it."
+    "You: \"
+    "As you inspect the shelf, Domingo enters the room."
+    "Domingo: \"
+    "Can these really help me with the runes?"
+    "Absolutely. For starters, use the inventory to upgrade your Mana Orb, which will increase your mana capacity. Also, take an additional rune table from there. It will allow you to learn multiple runes simultaneously."
+    "That sounds incredibly useful. I\'ll make sure to utilize these enhancements."
+    "Wise decision. These tools will aid you greatly on your path to becoming a powerful mage."
+    "You approach the shelf with a sense of awe, ready to explore the myriad of mystical aids that will bolster your magical journey."
+    "Better mana orb"
+    "Upgrade Rune table"
+    "Wizard Orb"
+    "As you meticulously arrange your study materials, Domingo enters, his presence bringing a sense of urgency."
+    "Domingo, catching your attention: \"
+    "The Wizard Orb? What does it do?"
+    "The Wizard Orb is a powerful artifact that accelerates the process of rune learning. However, it comes at a cost. Utilizing it makes the learning process more resource-intensive."
+    "So, it will speed up my learning, but at the expense of using more resources?"
+    "Precisely. The Orb channels the essence of your resources directly into the acceleration of your magical studies. It\'s a tool for those ready to invest heavily in their growth, sacrificing immediate resources for rapid advancement."
+    "That sounds like a powerful advantage. I\'m willing to make the necessary sacrifices for my development."
+    "Wise decision. The path of a mage is fraught with such choices. The Wizard Orb will test your dedication and resourcefulness."
+    "I\'ll use the Wizard Orb wisely, balancing my resources to maximize my growth. Thank you, Domingo."
+    "The journey of magic is one of constant learning and adaptation. The Wizard Orb is but one of many tools you\'ll encounter. Use it well."
+    "Build at least 1 level wizard orb"
+    "Activate at least 1 level wizard orb"
+    "The Knowledge Quest"
+    "Mana is crucial, but a mage\'s journey also demands another mental resource - knowledge."
+    "Knowledge? How does that help?"
+    "Domingo: \"
+    "Alright, I\'ll focus on mastering this Knowledge rune."
+    "Excellent. Remember, the depth of your knowledge defines the height of your power."
+    "Purchase Knowledge upgrade"
+    "Have 50 Knowledge runes"
+    "The Transformation of Power"
+    "Reaching a high level of mana capacity is vital. Aim for 175 levels of the mana cap rune."
+    "Once mastered, you can sacrifice your understanding of this rune to enhance its power significantly."
+    "Sacrifice my understanding?"
+    "Yes, but it worth it."
+    "You nod, understanding the importance of this task, ready to push your limits."
+    "NOTE: Look for a red indicator with an 'S' on the rune. Sacrificing it unlocks its true potential. Check the details at the bottom of the rune's page for the bonus it provides."
+    "Have at least 175 mana capacity runes"
+    "Sacrifice mana capacity rune"
+    "A Test of Will"
+    "After sacrificing the rune, you feel extremely weak, as if your skin is burning."
+    "This weakness is part of the process. Your willpower rune must also be sacrificed to reveal its full potential."
+    "It\'s painful... but I understand the necessity."
+    "Unfortunately, you have to do this for each rune separately. As you, probably, already understood - Willpower rune also requires sacrifices."
+    "Remember to utilize the shelf\'s instruments. They can be of great aid in your journey."
+    "You nod, steeling yourself for the next phase of your magical evolution."
+    "Have at least 175 willpower runes"
+    "Sacrifice willpower rune"
+    "Echoes of the Past"
+    "The room darkens as the man in the cloak reappears, his enigmatic aura filling the space."
+    "You have traversed a significant path, yet it is only the beginning. I found you amidst the remnants of a forgotten battle."
+    "A battle? What more can you tell me? Who am I in this vast world of magic?"
+    "Patience. Your past is not yet ready to surface. Focus on the now."
+    "The path of a mage is as much about the present as it is about the past. Our magical shelf glows with items and upgrades essential for your journey. It\'s a repository of arcane knowledge and tools."
+    "So, these upgrades... How do they fit into my training?"
+    "Each item, each upgrade, has its purpose. They enhance your abilities, aid in learning runes. But remember, the art of magic is a balance. Adjusting the Wizard orb level will increase resource demands for boosting rune learning speed, yet it will also escalate the cost in mana and knowledge."
+    "A strategic decision, then. How I use my resources to learn runes or adjust the orb could shape my journey as a mage."
+    "Precisely. The path of magic is yours to shape. Use the glowing shelf wisely, balance your resources, and your magical prowess will grow. The choices are yours, and they will forge your destiny."
+    "You stand before the glowing shelf, feeling the weight and potential of your choices, ready to delve deeper into the arcane mysteries that await."
+    "NOTE: Keep looking for rune sacrifices for reasonable bonuses. That might help you!"
+    "Crystals"
+    "Source of mana"
+    "Unlocking the Mastery"
+    "Knowledge is a journey, not a destination. To quicken your path, the Rune Mastery rune awaits your attention."
+    "Rune Mastery? How will it aid me?"
+    "It\'s a rune of potent knowledge, a beacon that illuminates the arcane path. Activating it will hasten your understanding of all runes, making your studies less arduous and more fruitful."
+    "Then I shall embrace this challenge. To master the runes swiftly is to advance my journey towards uncovering my true self."
+    "Indeed. The mastery of runes is the mastery of self. Proceed, and let the ancient wisdom guide you."
+    "You turn to your studies with renewed vigor, feeling the ancient magic waiting to be unlocked by your newfound knowledge."
+    "Rune Mastery rune"
+    "Have at least 20 Rune mastery runes"
+    "The Gateway to Destiny"
+    "As dawn breaks, the man in the cloak leads you to the roof. The first light of morning reveals a hidden city, shrouded in mystic fog and arcane energy."
+    "Behold, the Mages\' City, veiled from the world by spells of old. Here, magic breathes and thrives."
+    "It\'s magnificent... So, what must I do to earn my place there?"
+    "The Cloaked Man, pointing to a distant shimmering light: \"
+    "Then I shall not falter. I am ready to take this step, to walk through the gateway to my destiny."
+    "The man in the cloak watches silently as you descend back to the chamber, the city's image etched in your mind, a symbol of hope and mystery."
+    "Ticket to city"
+    "The Breath of Renewal"
+    "You step through the door into the bustling Mages City. Domingo greets you with a warm smile."
+    "Welcome to our hidden sanctuary. Here, mages seek refuge from those who hunt us. You fought valiantly against Hazzard, the dark elves\' leader, but at great cost."
+    "Hazzard... my powers, are they gone?"
+    "Domingo: \"
+    "You nod, understanding the urgency and importance of regaining your strength."
+    "Perform Breath techniques 20 times"
+    "Balance of Being"
+    "As you practice your breath techniques, Domingo approaches, his robe fluttering gently in the morning breeze of the city."
+    "The path of a mage is a delicate balance between the vigor of the body and the wisdom of the mind. Explore our city, meet fellow mages, and continue your breath exercises. The city is alive with lessons and mysteries waiting to be uncovered."
+    "I understand. The breath techniques have begun to fortify me, and I am eager to discover the city\'s secrets and its people. Their stories and wisdom are pieces of a larger puzzle."
+    "Indeed. And remember, the journey of a mage is never just outward. Continue your study and sacrifice of runes. It is a cycle that perpetuates growth. And do not fear – sacrificing runes will not impede your actions within the city. It is a seamless harmony between internal growth and external exploration."
+    "I will balance my journey, walking the line between the arcane and the worldly."
+    "That is the spirit. Let the rhythm of the city and the cadence of the runes guide you."
+    "Perform Breath techniques 250 times"
+    "Perform Investigate world 250 times"
+    "The Academy's Call"
+    "As you wander through the city, a grand building catches your eye. Its tall spires and mystical symbols mark it as a place of learning."
+    "Surprised to see you here so soon. This is our academy, where knowledge and power converge."
+    "It\'s magnificent. But how can I contribute here?"
+    "For now, focus on learning how to earn coins. It may seem mundane, but it\'s necessary for acquiring upgrades and furthering your studies."
+    "You, frustrated yet understanding the need: \"
+    "The Cloaked Man nods, a mysterious smile playing on his lips, as he vanishes into the shadows of the academy."
+    "You, disappointed, decide to leave without even entering academy"
+    "Push up"
+    "Have 2 coins"
+    "Breaking limits of the mind"
+    "Near the academy, you spot Domingo, his arms laden with scrolls, hurrying along. He spots you and pauses, a look of purpose in his eyes."
+    "Ah, I was just on my way to find you. Have you been to the academy yet? It\'s a cornerstone of our city, a beacon of knowledge and power."
+    "You, curious about the imposing building: \"
+    "You must visit it. The academy holds vital upgrades and tools for your journey. There\'s a wealth of knowledge to be found within its walls."
+    "He shifts the scrolls in his arms, continuing: \"
+    "You, intrigued by the prospect: \"
+    "Precisely. Knowledge is the foundation upon which all magic is built. Use it well, and you will see your abilities grow exponentially."
+    "With a final nod, Domingo hurries off, leaving you to ponder the secrets that await within the hallowed halls of the academy."
+    "Sacrifice Memory rune at least once"
+    "Read books"
+    "Read books"
+    "Mastery of Runes"
+    "Domingo finds you deeply engrossed in your rune studies, the air around you tinged with magical energy."
+    "Your dedication to the arcane arts is commendable. But now, we must deepen your understanding. The Rune Mastery rune is key to your growth."
+    "Rune Mastery? How can I enhance my skills further?"
+    "Sacrifice the Rune Mastery rune. It’s a powerful process that will amplify your command over runes. The sacrifice isn’t an end, but a new beginning, a way to access greater magical depths."
+    "He then gestures towards the academy: \"
+    "I see. Sacrifice for greater power, and continue my learning. The academy holds more secrets for me to uncover."
+    "Exactly. With each rune you master and each manuscript you read, you step closer to becoming a true master of the magical arts. Let the academy be your guide."
+    "Domingo turns to leave, but after a few steps, he pauses and swiftly turns back towards you."
+    "Ah, one more thing! Don’t overlook the power of crystals. They are not mere trinkets but potent tools that enhance your magical abilities. Utilizing crystals wisely can significantly bolster your progress."
+    "Crystals... I’ll make sure to explore their potential as well. Thank you, Domingo."
+    "Domingo: Also, to reveal true power of magic you will need immense amount of mana. Don't neglect sacrificing runes that increase your mana potential"
+    "You: Sure, mana is like a fuel for a wizard"
+    "Domingo gives a final nod, a twinkle in his eye, before leaving you to your studies. The mention of crystals adds another layer to the depth of your magical education."
+    "Sacrifice rune mastery rune at least once"
+    "Rune Language"
+    "Read manuscripts"
+    "Runic Resilience"
+    "Returning to the academy, you find Domingo in conversation with an elderly man."
+    "Meet our rune shopkeeper. He holds keys to many powers."
+    "This aspiring mage is ready for the Endurance rune."
+    "Endurance is vital for any mage. It will test and strengthen your limits. Purchase and focus on this rune."
+    "Endurance... it sounds like a vital step in my journey. I\'ll begin my work on it immediately."
+    "Domingo and the shopkeeper exchange a knowing glance, as you step towards understanding the resilience of a true mage."
+    "Purchase Endurance rune academy upgrade"
+    "Sacrifice endurance rune at least once"
+    "The Wisdom of Ages"
+    "While engrossed in your rune studies, Domingo enters the room."
+    "Your progress is remarkable. But the path of a mage requires vast knowledge. Amass 800K in knowledge - it is a key to unlocking deeper arcane secrets."
+    "Almost one million in knowledge... a daunting task, but I understand its importance."
+    "Visit the academy often. It holds many secrets and upgrades that can aid you. Your journey to mastery is only just beginning."
+    "You nod, feeling the weight of your quest, yet excited for the wealth of knowledge that lies ahead."
+    "Have 800K knowledge"
+    "Cycles of Renewal"
+    "The Cloaked Man finds you, his gaze piercing through the mysteries of life and death."
+    "Life is but a fleeting moment in the grand scheme. To transcend its limits, one must embrace reincarnation. It is time for you to undergo this profound transformation."
+    "Reincarnation? What does it entail?"
+    "It is the rebirth of self, breaking the shackles of time. Perform a scholar reincarnation to start anew, yet stronger and wiser. It is the path to true mastery."
+    "To start anew... Well, if it leads to greater power and understanding, I am ready."
+    "The cycle of rebirth will reveal truths unseen. Embrace it, and rise anew."
+    "Reincarnation"
+    "Perform reincarnation of any type at least once"
+    "Renewal of Strength"
+    "Feeling drained and weakened after your reincarnation, you encounter the man in the cloak and Domingo, who seem to have been discussing your condition."
+    "The man in the cloak glances at you, exchanging a silent look with Domingo, who had entered the room unnoticed."
+    "So, back to square one?"
+    "Domingo reassures you, explaining that your rune sacrifice levels and crystals remain intact. Moreover, you've grown stronger and will progress faster."
+    "Then, the man in the cloak suggests that instead of despair, you should focus on regaining your strength and purchase the meditation course and training chambers access at the academy."
+    "Meditation"
+    "Training Chambers Access"
+    "Intellectual Ascendancy"
+    "Deeply immersed in rune studies, the ambient light in your room seems to dance with the intensity of your focus. Domingo enters, his footsteps nearly silent."
+    "Your commitment to the arcane is truly impressive. Yet, remember the role of intellect. It\'s the cornerstone that supports the mastery of runes and the efficiency of mental endeavors."
+    "I’ve been so focused on the runes themselves, I may have overlooked the broader picture."
+    "Indeed. Intellect is like the light that illuminates the path of knowledge. With 1 billion Intellect, the complexities of the arcane will unravel before you, easing your journey significantly."
+    "Then I shall endeavor to sharpen my intellect to its finest edge, turning challenges into opportunities for growth."
+    "That’s the spirit of a true mage. Let your mind be as boundless as the stars."
+    "Have 1B Intellect"
+    "Chase for Agility"
+    "As you stroll near the academy, you notice Domingo in a state of haste, his brows furrowed with worry. Suddenly, he signals you towards a fleet-footed thief, clutching a box of runes."
+    "Stop that thief! They\'ve stolen some of our most valuable runes!"
+    "Catching your breath, you return to Domingo, who looks at you thoughtfully."
+    "Domingo: \"
+    "You, determined not to be outpaced again: \"
+    "Good. And remember, the pursuit of agility might require you to first master other skills and gain new knowledge. The academy will guide you."
+    "Agility"
+    "Agility"
+    "The Path to Wizardry"
+    "Returning to your room, you overhear a conversation between the man in the cloak and Domingo."
+    "Do you think he\'s ready for the next step?"
+    "Domingo notices you and quickly shifts the conversation: \"
+    "Basic Wizardry? What will that entail?"
+    "Domingo: \"
+    "Feeling a mix of excitement and determination, you nod in agreement, ready to embark on this new chapter of your magical journey."
+    "Basic Wizardry"
+    "Spark of Illusion"
+    "Standing with the cloaked man on a rooftop, you gaze out over the city, taking in the view."
+    "Once, a mage saved this city from a horde of demons by conjuring a powerful spark, incinerating the invaders."
+    "Who was this mage?"
+    "Cloaked Man: \"
+    "Feeling an awakening within, you realize the path ahead is filled with deeper mysteries and powerful magic waiting to be unveiled."
+    "Illusion Spells"
+    "Conjure Spark"
+    "Crafting the Arcane"
+    "True mages can materialize their thoughts into reality. And now, you need to learn this art as you\'re in need of more inventory."
+    "Start by learning Woodworking at the academy. It’s crucial to take care of your surroundings, your abode. Yes, your abode. From today, you are a full member of the mage order, and this abode is rightfully yours."
+    "Woodworking? I never thought it’d be part of a mage’s skills."
+    "It’s about shaping the world around you, not just with magic but with skill and craft. Start with the basics and your workshop will soon reflect your magical prowess."
+    "Woodworking"
+    "Have at least 5 Training Benches"
+    "Have at least 5 Bookshelves"
+    "Spell Mastery"
+    "While you are busy managing your estate, Domingo knocks and steps into the room. He observes your work with a nod of recognition."
+    "I see you\'ve mastered the basics of crafting materials and transforming them into something useful. The academy holds much more knowledge in this area, knowledge that will be crucial for your journey."
+    "You, pausing your work: \"
+    "Domingo, leaning against the doorway: \"
+    "Enhancing Spellbinding... it sounds like a journey in itself."
+    "Indeed, it is. But I have confidence in you. You\'ve shown remarkable ability to self-improve. Remember to balance your time between runes, crystals, the academy, and equipping your estate with items made from complex materials."
+    "It will be a long journey, but I\'m ready for it. The path of a mage is never a short one."
+    "That\'s the spirit. Each step you take in enhancing your Spellbinding attribute brings you closer to the true mastery of magic. Go forth with patience and persistence."
+    "Have Spellbinding attribute at least 1000"
+    "Conjuration's Depth"
+    "As you practice your magic, Domingo enters with a knock, observing your efforts."
+    "Your training is progressing well. The academy has a course that will deepen your understanding in this area. Also, you’ll need to work with more complex and even enchanted materials, which will require further processing."
+    "I’m ready to take on more complex aspects of magic. The challenge excites me."
+    "Excellent. The path of a mage is never static. Always evolving, always growing. Your dedication will unlock new realms of power."
+    "Have Conjuration attribute at least 10"
+    "Duty of the Mage"
+    "As a full member of the mage order, you have responsibilities to the order and the city, including ensuring its safety."
+    "After completing several courses and trainings, you’ll gain access to battle magic. But first, you must learn the basics and ensure the safety of the sewers. There are always mutated rats attacking the cleaners there."
+    "Protecting the city is a noble duty. I will prepare myself for this task and ensure the safety of those below."
+    "This is the way of the mage – protector, scholar, and guardian. Your journey into battle magic begins now."
+    "Purchase Battles upgrade"
+    "Have at least one fight in Sewers"
+    "Guardian of the City"
+    "Even though our city is well-protected, enemies often infiltrate it in hidden ways. Each mage has pledged to protect the city in exchange for sanctuary."
+    "He adds: \"
+    "To be a guardian, to protect those around me – I embrace this duty. I’ll begin my training in these spells immediately."
+    "Your commitment to the safety of our city is commendable. These spells are not just for defense; they are a mage’s promise to those they protect."
+    "Protection"
+    "Evocation"
+    "Rescue in the Sewers"
+    "In the midst of your training routine, the door bursts open, and the cloaked man rushes in, his face etched with concern."
+    "Cloaked Man, breathlessly: \"
+    "Domingo missing in the sewers? That doesn\'t sound good. What do you think happened?"
+    "I fear he may have encountered something... dangerous. The sewers are not just simple tunnels; they hide many perils beneath the city."
+    "I\'ll go find him. No one knows those tunnels better than Domingo, but he might need help."
+    "Be cautious. Whatever lies in those depths is not to be underestimated. Reach at least level 50 - that\'s where he was heading. And be prepared for anything."
+    "I\'ll bring him back. Whatever it takes."
+    "As the cloaked man leaves, you take a deep breath, steeling yourself for the challenges of the sewer's labyrinthine paths and unknown dangers lurking in the shadows."
+    "Reach level 75 in Sewers"
+    "Confrontation in the Shadows"
+    "The severed head of another rat falls at your feet. The deeper you venture, the more oppressive the stench becomes, stifling your breath. Suddenly, your torch flickers out, leaving you enveloped in darkness."
+    "Fumbling in the dark, you stumble over something. Relighting your torch, the flame reveals a chilling sight beneath you."
+    "Domingo..."
+    "Lying before you is the lifeless body of Domingo, his face frozen in an eternal silence. A voice echoes from the shadows behind you, dripping with irony:"
+    "Oh, what a reunion! Our little boy has grown so much..."
+    "Turning swiftly, you come face to face with a gaunt, pallid man in a silver cloak, holding a scepter. Flashes of memory engulf you – a destroyed city, the same man wielding the scepter, and your own defeat..."
+    "Hazzard? Delighted to see you again!"
+    "Glad to see your memory and sharp tongue are intact. A pity they won’t be of much use to you anymore! Doneskin, deal with this!"
+    "Hazzard utters an incantation and vanishes. In his place, a massive three-headed rat materializes."
+    "Thank you, master, master feeds Doneskin! Doneskin will not starve anymore!"
+    "You brace yourself, knowing this battle will not just be for survival, but a clash entwined with your past and the shadows that have haunted you."
+    "Beat Doneskin"
+    "The Path to True Power"
+    "As the last head of Doneskin smolders, a deep sense of frustration washes over you. You couldn't catch Hazzard, couldn't end this once and for all. Your thoughts are interrupted by footsteps behind you."
+    "The man in the cloak places a hand on your shoulder, sensing your despair."
+    "You, in anguish: \"
+    "In fact, you just won your most challenging battle - the battle with your past, with your fear. That is a remarkable victory."
+    "But Hazzard is still alive. He\'s here, and the city is in danger."
+    "Cloaked Man: \"
+    "So what, I should go back to sweeping streets, reading magical books, and learning runes?"
+    "Enough of these childish tantrums. When it comes to eternal conflicts, time is irrelevant. You must gather your spirit and dedicate as much time and effort as needed for our victory! Yes, it requires extensive training and learning. The major battles are still ahead of you. You haven’t even mastered half of the knowledge required to stand against our enemies."
+    "The cloaked man vanishes, leaving you without a specific task, but his words resonate within you... It's clear what you must do."
+    "Reach 1Oc (1.e+27) intellect"
+    */
+
     //
     "Mana": "法力",
     "Keep expanding mana, investigating new upgrades to unlock more resources": "不断扩展法力上限，探索新的升级，来解锁新的资源",
@@ -889,8 +1259,11 @@ var cnItems = {
     "Change": "变更",
     "None": "无",
     //"Active Runes:": "学习中符文：",
+    "Automation": "自动",
+    "You can have only a limited amount of runes running simultaneously. The limit can be increased with various upgrades. Click OFF/ON buttons to activate/deactivate rune learning": "你同一时间能学习的符文数量有限制。该限制可以通过一些升级提升。点击 关/开 按钮以激活/取消符文学习",
     "Click rune to view details": "点击符文图标以查看更多内容",
-
+    
+    "Wizard orb will boost learning speed of selected runes, but significantly increase their cost. Speed bonus and cost penalty depends on active level, and applies to ALL active runes": "巫师宝珠会提升所有已激活符文的学习速度，但会显著地提升学习时的资源消耗。每提升一级都会使正面、负面效果同时提升",
     "Wizard Orb (": "巫师宝珠（",
     "(": "（",
     ")": "）",
@@ -907,6 +1280,8 @@ var cnItems = {
     "Upgrades": "升级",
     "Autoupgrade turned on": "已启用自动升级",
     "Upgrade": "升级：",
+    "Upgrade Max": "升级最大",
+    "Auto upgrade": "自动升级",
 
     "Produce": "生产",
     "Multipliers": "倍率：",
@@ -915,7 +1290,9 @@ var cnItems = {
     "Upgrade cost:": "升级成本：",
     "Upgrade": "升级",
     "Crystals": "水晶",
-    "Crystals provide various boosts that persist through almost all type of resets": "水晶会为你提供各种加成，且在所有类型的重置中都会保留",
+    "Crystals provide various boosts that persist through all type of resets": "水晶会为你提供各种加成，且在所有类型的重置中都会保留",
+    "Autobuild All": "自动建造全部",
+    "Cancel Autobuild All": "取消自动建造全部",
     "Click crystal to view details": "点击水晶以查看详情",
 
     "Recipes (": "配方",
@@ -948,6 +1325,38 @@ var cnItems = {
     "Crystals": "水晶",
 
     //
+    "v0.0.2c Tiny Update": "v0.0.2c 微型更新",
+    "Quick lists are now automatically adding all pre-requisites": "快速列表现在会自动添加所有所需的前置动作（例如 创造火花），而非只有 休息",
+    "Actions automation now also more clever: adding resources it needs into single list, and have better logic overall": "动作自动化现在更智能：会自动添加所需的前置动作，并优化整体逻辑",
+    "Crafting recipes now show details on hover": "工艺配方现在会在鼠标悬浮时显示详细内容",
+    "Added hint explanation to wizard orb": "增加对于巫师宝珠的鼠标悬浮说明",
+
+    //
+    "v0.0.2b Hotfix patch": "v0.0.2b 热修复补丁",
+    "Fixed some logic issues causing runes automation to stuck": "修复了一些导致符文自动化卡住的 bug",
+    'Fixed and optimized "Optimize list" functionality': "修复并优化了“优化列表”功能",
+    "Fixed white screen errors": "修复了白屏 bug",
+
+    //
+    "v0.0.2a Small QoL Update": "v0.0.2 小型用户体验更新",
+    "Added academy upgrade, providing runes automation": "增加了一个学院升级，使符文可以自动化学习",
+    "Added option to action optimize lists": "增加了自动优化动作列表的按钮",
+    "Fixed some UI bugs": "修复了一些 UI bug",
+    "Reduced knowledge costs of some early game runes": "降低了一些前期符文的知识消耗",
+    "Increased minimum requirements for reincarnation": "提升了转生的最低要求",
+
+    //
+    "v0.0.2 Minor Update": "v0.0.2 小型更新",
+    "Implemented game story": "增加了剧情",
+    "Significantly re-balanced city actions": "显著地重新平衡了城市动作",
+    "Rune sacrifices are now stronger": "大幅加强了符文献祭的效果",
+    "Scholar reincarnation now reduce runes XP cost scaling": "学术转生现在会降低符文升级所需的经验值",
+    "Added new late game resources, actions and structures": "增加了新的后期资源、动作和制造物",
+    "Added automation for most of game aspects": "为游戏的大多数内容增加了自动化",
+    "Numbers notation can now be changed in settings": "现在可以在设置中改变计数法",
+    "Fixed some UI bugs": "修复了一些 UI bug",
+
+    //
     "v0.0.1 Minor Update": "v0.0.1 小型更新",
     "Added few more academy upgrades and actions": "增加了新的学院升级",
     "Added crafting presets": "增加了工艺制作预设功能",
@@ -959,7 +1368,7 @@ var cnItems = {
     "v0.0.0a Hotfix Update": "v0.0.0a 热修复更新",
     "Added few more academy upgrades, craftable resources and structures": "增加了一些学院升级，可制作的资源和制造物",
     "Fixed bug when some achievements were assigned by mistake": "修复了偶尔会错误地获得部分成就的 bug",
-    "Fixed runes behaviour": "修复了一些符文的 bug",
+    "Fixed runes behaviour": "修复了一些符文相关的 bug",
     "Fixed some performance issues": "修复了一些运行问题",
     //
     "v0.0.0 Initial Demo Release": "v0.0.0 第一版 DEMO 发布",
@@ -991,11 +1400,17 @@ var cnItems = {
     "This action will remove all your game data. Are you sure?": "该动作会删除你所有的游戏进度。你确定吗？",
     "Wipe game data": "彻底删除游戏存档",
 
+    "UI Settings": "界面设置",
+    "Numbers Notation": "计数法",
+    "Standard": "标准",
+    "Scientific": "科学",
+
     "Gameplay": "游戏性",
     "Reset notifications on prestige": "重置时重置新项目提醒",
     "On": "开",
     "Off": "关",
     "Turn on autoupgrade": "开启自动升级",
+    "Show Story": "显示剧情",
 
     /*
     "Never"
@@ -1071,12 +1486,16 @@ var cnItems = {
     "Edit": "编辑",
     "Run": "开始",
     "Delete List": "删除列表",
-    "Click create new list button above to create some list of actions that can be run over time, providing you various bonuses": "点击 创建新列表 按钮来建立一个列表，将动作加入其中，并循环执行，来为你提供各种加成",
+    "Do actions automatically": "自动执行动作",
+    "Your mage will be left alone in the city doing actions on his own. Not very efficient way to progress, but might be useful when you going to leave for a while": "巫师会停留在城市里，自行决定要做什么动作。肯定不如你的精心安排来得高效，但至少比什么都不做好一些",
+    "Click create new list button above to crilter by % incr. per sec.eate some list of actions that can be run over time, providing you various bonuses": "点击 创建新列表 按钮来建立一个列表，将动作加入其中，并循环执行，来为你提供各种加成",
     "Enter list name": "输入列表名称",
     "Save": "保存",
+    "Cancel": "取消",
     "Amount of time required for action to perform in list. The highest number - the more attention you should pay to basic attributes, affecting this action": "该动作在列表中耗时的占比。这个数字越高，代表你如果想降低该列表耗时，应该越关注影响该动作的属性（例如活力，智力，敏捷等）",
 
     "Set": "设置",
+    "Add requirements": "添加前置动作",
     "Time to complete:": "耗时：　　",
     "Produce": "生产",
     "Production Multiplier": "产量倍率",
@@ -1275,6 +1694,7 @@ var cnPrefix = {
     "  ": " ",
     " ": " ",
 
+    /*
     "Aelwyn ": "艾尔温·",
     "Alaric ": "阿拉里克·",
     "Arius ": "阿里乌斯·",
@@ -1370,6 +1790,7 @@ var cnPrefix = {
     "Helios ": "赫利俄斯·",
     "Isaiah ": "以赛亚·",
     "Julius ": "尤利乌斯·",
+    */
 
     "Current bonus:": "当前加成：",
     "Bonus on reset:": "转生后加成：",
@@ -1436,7 +1857,7 @@ var cnPostfix = {
     "\n\t\t": "\n\t\t",
     "\t": "\t",
 
-
+    /*
     "Nightshade": "夜影",
     "Dragonheart": "龙心",
     "Stormbringer": "风暴使者",
@@ -1527,7 +1948,8 @@ var cnPostfix = {
     "Firewatcher": "观火者",
     "Ironshaper": "塑铁者",
     "Moondancer": "月舞",
-    
+    */
+
     "/sec": "/秒",
     "/ sec": "/ 秒",
     "(Click OFF/ON buttons to activate/deactivate rune learning)": "（点击关/开按钮以激活/取消符文学习）",
