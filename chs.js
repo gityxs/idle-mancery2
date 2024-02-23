@@ -2038,7 +2038,7 @@ var cnRegReplace = new Map([
     [/^(\d+) November, (\d+)$/, '$2/11/$1'],
     [/^(\d+) December, (\d+)$/, '$2/12/$1'],
 
-    [/^(.+) rune learning speed$/, '符文学习速度变为 $1 倍'],
+    [/^(.+) rune learning effort increase reduction$/, '符文升级经验需求量的增长率变为 $1 分之一'],
     [/^(.+) physical actions max speed, (.+) to physical actions speed$/, '物理动作速度上限变为 $1 倍，速度变为 $2 倍'],
     [/^(.+) mental actions max speed, (.+) to mental actions speed$/, '精神动作速度上限变为 $1 倍，速度变为 $2 倍'],
     [/^(.+) spell max speed, (.+) to spell speed$/, '法术动作速度上限变为 $1 倍，速度变为 $2 倍'],
